@@ -4,7 +4,7 @@ title: "How to Troubleshoot Common Air Conditioning Issues in Northampton, PA"
 date: 2026-04-09
 category: "Tips"
 author: "Action Plumbing"
-image: "/images/how-to-troubleshoot-common-air-conditioning-issues-in-northampton-pa-1775766408829.webp"
+image: "/images/broken-ac-hot-summer.webp"
 excerpt: "When summer temperatures soar in Northampton, PA, a malfunctioning air conditioner can quickly become a major headache."
 description: "Learn how to troubleshoot common air conditioning issues in Northampton, PA with simple fixes, maintenance tips, and signs you need professional AC service."
 ---
