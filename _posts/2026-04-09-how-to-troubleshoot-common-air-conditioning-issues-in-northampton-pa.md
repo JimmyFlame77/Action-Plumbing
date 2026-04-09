@@ -4,22 +4,21 @@ title: "How to Troubleshoot Common Air Conditioning Issues in Northampton, PA"
 date: 2026-04-09
 category: "Tips"
 author: "Action Plumbing"
-image: "/images/broken-ac-hot-summer.webp"
+image: "/images/broken-ac-hot-summer-ga9u35.webp"
 excerpt: "When summer temperatures soar in Northampton, PA, a malfunctioning air conditioner can quickly become a major headache."
 description: "Learn how to troubleshoot common air conditioning issues in Northampton, PA with simple fixes, maintenance tips, and signs you need professional AC service."
 ---
-
 Keeping your air conditioner running smoothly is essential when temperatures start climbing. While some issues may seem serious at first, many common A/C problems can be diagnosed with a few simple checks. Understanding what to look for can save time, reduce stress, and help you decide when it’s time to call in a professional.
 
 ## A/C Not Turning On
 
 When your air conditioner won’t start at all, the issue may be simpler than you think. Start by checking your thermostat settings. Make sure it’s set to “cool” and that the temperature is set lower than the current room temperature. If everything looks correct but nothing happens, the next step is to inspect your electrical panel. A tripped circuit breaker can easily cut power to your system. Resetting the breaker may restore functionality right away.
 
-If your system still doesn’t respond after these checks, it could indicate a deeper electrical issue or a problem within the unit itself.
+If your air conditioning system still doesn’t respond after these checks, it could indicate a deeper electrical issue or a problem within the unit itself.
 
 ## Weak or No Airflow
 
-Poor airflow is one of the most common A/C complaints, and it often has an easy fix. A clogged or dirty air filter can significantly restrict airflow, making your system work harder while delivering less cooling. Replacing the filter is a quick and inexpensive solution that can instantly improve performance.
+Poor airflow is one of the most common air conditioning complaints, and it often has an easy fix. A clogged or dirty air filter can significantly restrict airflow, making your system work harder while delivering less cooling. Replacing the filter is a quick and inexpensive solution that can instantly improve performance.
 
 You’ll also want to check your vents and registers throughout the home. Make sure they are fully open and not blocked by furniture, curtains, or debris. Even partial obstructions can reduce airflow and create uneven cooling from room to room.
 
