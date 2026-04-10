@@ -1,0 +1,29 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Action<span> Plumbing</span></div>
+        <p class="footer-tagline">Plumbing &amp; HVAC Experts<br>Lehigh Valley, PA &bull; Since 1995</p>
+        <p class="footer-tagline" style="margin-top:.5rem;">Family &amp; Veteran-Owned</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="{{ site.data.site.main_site }}">Home</a>
+        <a href="{{ site.data.site.main_site }}/plumbing-and-water">Plumbing</a>
+        <a href="{{ site.data.site.main_site }}/heating-and-air">Heating &amp; Air</a>
+        <a href="{{ site.data.site.main_site }}/sewer-and-drain-cleaning">Drain &amp; Sewer</a>
+        <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+        <a href="{{ site.data.site.main_site }}/contact">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <a href="{{ site.data.site.phone_link }}" class="footer-phone">{{ site.data.site.phone_formatted }}</a>
+        <p>{{ site.data.site.hours }}</p>
+        <p style="margin-top:.6rem;">Northampton County, PA<br>Lehigh County, PA<br>Warren County, NJ</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ site.data.site.year }} {{ site.data.site.company_name }}. All rights reserved. Licensed &amp; Veteran-Owned.</p>
+    </div>
+  </div>
+</footer>
