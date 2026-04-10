@@ -1,36 +1,66 @@
 ---
 layout: default
-title: "Action Plumbing Heating & HVAC | Lehigh Valley Blog"
-description: "Plumbing and HVAC tips, guides, and news from Action Plumbing Heating & HVAC - serving the Lehigh Valley since 1995."
+title: "Action Plumbing Heating & HVAC | Lehigh Valley, PA"
+description: "Licensed plumbing and HVAC services in the Lehigh Valley, PA. Family and veteran-owned since 1995."
 ---
-<section class="blog-hero">
-  <div class="container">
-    <h1>Action Plumbing &amp; HVAC Blog</h1>
-    <p>Expert tips and guides from the Lehigh Valley&#39;s trusted plumbing and HVAC team.</p>
-    <a href="{{ '/blog.html' | relative_url }}" class="btn btn-primary" style="margin-top:1.25rem;">View All Posts</a>
+<section class="construction-page">
+  <div class="container construction-container">
+    <img
+      src="{{ '/images/broken-ac-hot-summer-ga9u35.webp' | relative_url }}"
+      alt="Hot summer day in the Lehigh Valley — time to call Action Plumbing"
+      class="construction-img"
+    >
+    <h1>Action <span>Plumbing</span> Heating &amp; HVAC</h1>
+    <p class="construction-sub">Our new site is coming soon. In the meantime, we&#39;re still on the job 24/7.</p>
+    <p class="construction-tagline">Serving the Lehigh Valley since 1995 &mdash; Family &amp; Veteran-Owned.</p>
+    <a href="{{ site.data.site.phone_link }}" class="btn btn-primary construction-cta">{{ site.data.site.phone_formatted }}</a>
   </div>
 </section>
-<section class="blog-listing">
-  <div class="container">
-    <div class="post-grid">
-      {% for post in site.posts limit:6 %}
-      <article class="post-card">
-        {% if post.image %}
-        <a href="{{ post.url | relative_url }}" class="post-card-img-wrap">
-          <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
-        </a>
-        {% endif %}
-        <div class="post-card-body">
-          {% if post.category %}<span class="post-cat">{{ post.category }}</span>{% endif %}
-          <h2 class="post-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-          <div class="post-card-footer">
-            <span class="post-card-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <a href="{{ post.url | relative_url }}" class="read-more">Read More &rarr;</a>
-          </div>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+
+<style>
+.construction-page {
+  background: var(--clr-primary);
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.25rem;
+  text-align: center;
+  color: var(--clr-white);
+}
+.construction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  max-width: 520px;
+}
+.construction-img {
+  width: 100%;
+  max-width: 380px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.35);
+}
+.construction-page h1 {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 900;
+  line-height: 1.15;
+}
+.construction-page h1 span { color: var(--clr-accent); }
+.construction-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,.85);
+  max-width: 420px;
+}
+.construction-tagline {
+  font-size: .9rem;
+  color: rgba(255,255,255,.55);
+}
+.construction-cta {
+  font-size: 1.05rem;
+  padding: .8rem 2rem;
+  margin-top: .25rem;
+}
+</style>
