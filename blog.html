@@ -1,0 +1,35 @@
+---
+layout: default
+title: "Blog | Action Plumbing Heating & HVAC"
+description: "Plumbing and HVAC tips, guides, and news from the experts at Action Plumbing Heating & HVAC in the Lehigh Valley, PA."
+---
+<section class="blog-hero">
+  <div class="container">
+    <h1>Plumbing &amp; HVAC Blog</h1>
+    <p>Tips, guides, and news from the Lehigh Valley&#39;s trusted plumbing and HVAC experts.</p>
+  </div>
+</section>
+<section class="blog-listing">
+  <div class="container">
+    <div class="post-grid">
+      {% for post in site.posts %}
+      <article class="post-card">
+        {% if post.image %}
+        <a href="{{ post.url | relative_url }}" class="post-card-img-wrap">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
+        </a>
+        {% endif %}
+        <div class="post-card-body">
+          {% if post.category %}<span class="post-cat">{{ post.category }}</span>{% endif %}
+          <h2 class="post-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+          <div class="post-card-footer">
+            <span class="post-card-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <a href="{{ post.url | relative_url }}" class="read-more">Read More &rarr;</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
