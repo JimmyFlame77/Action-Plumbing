@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jimmyflame77.github.io/Action-Plumbing/sitemap.xml
