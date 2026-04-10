@@ -1,0 +1,28 @@
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="{{ site.data.site.main_site }}" class="logo">
+        Action<span class="logo-accent"> Plumbing</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="{{ site.data.site.main_site }}">Home</a></li>
+        <li><a href="{{ site.data.site.main_site }}/plumbing-and-water">Plumbing</a></li>
+        <li><a href="{{ site.data.site.main_site }}/heating-and-air">Heating &amp; Air</a></li>
+        <li><a href="{{ site.data.site.main_site }}/sewer-and-drain-cleaning">Drain &amp; Sewer</a></li>
+        <li><a href="{{ '/blog.html' | relative_url }}" {% if page.url contains 'blog' %}class="active"{% endif %}>Blog</a></li>
+      </ul>
+      <a href="{{ site.data.site.phone_link }}" class="btn btn-primary nav-cta">{{ site.data.site.phone_formatted }}</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="{{ site.data.site.main_site }}">Home</a>
+    <a href="{{ site.data.site.main_site }}/plumbing-and-water">Plumbing</a>
+    <a href="{{ site.data.site.main_site }}/heating-and-air">Heating &amp; Air</a>
+    <a href="{{ site.data.site.main_site }}/sewer-and-drain-cleaning">Drain &amp; Sewer</a>
+    <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+    <a href="{{ site.data.site.phone_link }}" style="color:var(--clr-accent);margin-top:.5rem;">&#128222; {{ site.data.site.phone_formatted }}</a>
+  </nav>
+</header>
