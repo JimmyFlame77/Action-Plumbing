@@ -1,0 +1,71 @@
+---
+layout: default
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | truncatewords: 30 | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "author": { "@type": "Organization", "name": {{ page.author | default: site.data.site.company_name | jsonify }} },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.data.site.company_name | jsonify }},
+    "logo": { "@type": "ImageObject", "url": "{{ site.url }}{{ site.baseurl }}/assets/images/favicon.jpg" }
+  }{% if page.image %},
+  "image": "{{ site.url }}{{ site.baseurl }}{{ page.image }}"{% endif %},
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}{{ site.baseurl }}{{ page.url }}" }
+}
+</script>
+
+{% if page.image %}
+<section class="article-hero">
+  <div class="article-hero-img-wrap">
+    <img class="article-hero-img" src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
+  </div>
+</section>
+{% endif %}
+
+<article class="article-body">
+  <div class="container article-container">
+    <div class="article-meta">
+      {% if page.category %}<span class="post-cat">{{ page.category }}</span>{% endif %}
+      <span class="article-date">{{ page.date | date: "%b %-d, %Y" }}</span>
+      {% if page.author %}<span class="article-author">by {{ page.author }}</span>{% endif %}
+    </div>
+    <h1 class="article-title">{{ page.title }}</h1>
+    <div class="article-content">
+      {{ content }}
+    </div>
+    <nav class="article-nav">
+      {% if page.previous %}
+        <a href="{{ page.previous.url | relative_url }}" class="article-nav-link article-nav-prev">
+          <span class="article-nav-label">&larr; Previous</span>
+          <span class="article-nav-title">{{ page.previous.title }}</span>
+        </a>
+      {% else %}<span class="article-nav-link article-nav-placeholder"></span>{% endif %}
+      {% if page.next %}
+        <a href="{{ page.next.url | relative_url }}" class="article-nav-link article-nav-next">
+          <span class="article-nav-label">Next &rarr;</span>
+          <span class="article-nav-title">{{ page.next.title }}</span>
+        </a>
+      {% else %}<span class="article-nav-link article-nav-placeholder"></span>{% endif %}
+    </nav>
+    <div class="article-back">
+      <a href="{{ '/blog.html' | relative_url }}" class="btn btn-outline">&larr; Back to Blog</a>
+    </div>
+  </div>
+</article>
+
+<section class="cta-strip">
+  <div class="container">
+    <h2>Need Plumbing or <span>HVAC Help?</span></h2>
+    <p>24/7 emergency service &mdash; same-day appointments available. 30-day labor warranty.</p>
+    <div class="cta-actions">
+      <a href="{{ site.data.site.main_site }}/contact" class="btn btn-primary">Request Service</a>
+      <a href="{{ site.data.site.phone_link }}" class="btn btn-outline">{{ site.data.site.phone_formatted }}</a>
+    </div>
+  </div>
+</section>
