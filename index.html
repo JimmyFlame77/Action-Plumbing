@@ -23,6 +23,38 @@ description: "Licensed plumbing and HVAC services in the Lehigh Valley, PA. Fami
   </div>
 </section>
 
+<!-- ===== SERVICES ===== -->
+<section class="services-section">
+  <div class="container">
+    <div class="services-header">
+      <h2>Services</h2>
+    </div>
+    <div class="svc-grid">
+      {% include service-card.html
+        title="Heating &amp; Air"
+        image="/images/action-plumbing-hvac.webp"
+        alt="HVAC technician servicing a unit"
+        desc="Our heating and air conditioning services keep your indoor environment comfortable year-round."
+        link="/heating-and-air"
+      %}
+      {% include service-card.html
+        title="Plumbing &amp; Water"
+        image="/images/action-plumbing-wrench.webp"
+        alt="Plumber working on pipes"
+        desc="From minor leaks to major pipe replacements, our plumbing services cover all aspects of your home or business's water systems."
+        link="/plumbing-and-water"
+      %}
+      {% include service-card.html
+        title="Drain &amp; Sewer"
+        image="/images/action-plumbing-sewage.webp"
+        alt="Drain and sewer cleaning service"
+        desc="Our sewer and drain cleaning utilizes advanced techniques and equipment to clear blockages and maintain the integrity of your plumbing system."
+        link="/sewer-and-drain-cleaning"
+      %}
+    </div>
+  </div>
+</section>
+
 <style>
 /* ---- Hero ---- */
 .hero {

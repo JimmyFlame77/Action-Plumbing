@@ -1,0 +1,29 @@
+{% comment %}
+  Service Card Include
+  ——————————————————————————————————————————
+  Parameters:
+    include.title  — Card heading (e.g. "Heating & Air")
+    include.image  — Absolute-path image (e.g. "/images/action-plumbing-hvac.webp")
+    include.alt    — Image alt text
+    include.desc   — Short description paragraph
+    include.link   — Destination URL (e.g. "/heating-and-air")
+
+  Usage example:
+    {% include service-card.html
+      title="Heating &amp; Air"
+      image="/images/action-plumbing-hvac.webp"
+      alt="HVAC technician servicing a unit"
+      desc="Our heating and air conditioning services keep your indoor environment comfortable year-round."
+      link="/heating-and-air"
+    %}
+{% endcomment %}
+<article class="svc-card">
+  <a href="{{ include.link | relative_url }}" class="svc-card-img-wrap" aria-label="Learn more about {{ include.title }}">
+    <img src="{{ include.image | relative_url }}" alt="{{ include.alt }}" loading="lazy">
+  </a>
+  <div class="svc-card-body">
+    <h3 class="svc-card-title">{{ include.title }}</h3>
+    <p class="svc-card-desc">{{ include.desc }}</p>
+    <a href="{{ include.link | relative_url }}" class="btn btn-primary svc-card-btn">Learn More</a>
+  </div>
+</article>
