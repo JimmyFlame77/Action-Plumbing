@@ -3,64 +3,110 @@ layout: default
 title: "Action Plumbing Heating & HVAC | Lehigh Valley, PA"
 description: "Licensed plumbing and HVAC services in the Lehigh Valley, PA. Family and veteran-owned since 1995."
 ---
-<section class="construction-page">
-  <div class="container construction-container">
-    <img
-      src="{{ '/images/broken-ac-hot-summer-ga9u35.webp' | relative_url }}"
-      alt="Hot summer day in the Lehigh Valley — time to call Action Plumbing"
-      class="construction-img"
-    >
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
     <h1>Action <span>Plumbing</span> Heating &amp; HVAC</h1>
-    <p class="construction-sub">24/7 Emergency Service | Service Scheduled Within 1-2 Days | 30-Day Labor Warranty</p>
-    <p class="construction-tagline">Serving the Lehigh Valley since 1995 &mdash; Family &amp; Veteran-Owned.</p>
-    <a href="{{ site.data.site.phone_link }}" class="btn btn-primary construction-cta">{{ site.data.site.phone_formatted }}</a>
+    <p class="hero-sub">24/7 Emergency Service &nbsp;|&nbsp; Scheduled Within 1&ndash;2 Days &nbsp;|&nbsp; 30-Day Labor Warranty</p>
+    <p class="hero-tagline">Serving the Lehigh Valley since 1995 &mdash; Family &amp; Veteran-Owned.</p>
+    <a href="{{ site.data.site.phone_link }}" class="btn btn-primary hero-cta">{{ site.data.site.phone_formatted }}</a>
+  </div>
+</section>
+
+<!-- ===== INTRO ===== -->
+<section class="intro-section">
+  <div class="container intro-container">
+    <h2>Your Trusted Source for Plumbing and HVAC Solutions</h2>
+    <p>Action Plumbing Heating &amp; HVAC is your trusted partner for all your plumbing and HVAC needs in the Lehigh Valley Metro area. With over three decades of experience, our team of licensed and certified master plumbers is dedicated to providing exceptional service to homeowners and businesses alike. We understand that plumbing and HVAC issues can arise at any time, which is why we offer round-the-clock emergency services for your comfort and peace of mind.</p>
   </div>
 </section>
 
 <style>
-.construction-page {
-  background: var(--clr-primary);
+/* ---- Hero ---- */
+.hero {
+  position: relative;
   min-height: calc(100vh - 64px);
+  background-image: url('{{ "/images/broken-ac-hot-summer-ga9u35.webp" | relative_url }}');
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 1.25rem;
   text-align: center;
   color: var(--clr-white);
 }
-.construction-container {
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 27, 46, 0.60) 0%,
+    rgba(14, 27, 46, 0.75) 100%
+  );
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.4rem;
-  max-width: 520px;
+  gap: 1.25rem;
+  padding: 3rem 1.25rem;
+  max-width: 700px;
 }
-.construction-img {
-  width: 100%;
-  max-width: 380px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0,0,0,.35);
-}
-.construction-page h1 {
-  font-size: clamp(1.8rem, 5vw, 2.6rem);
+.hero-content h1 {
+  font-size: clamp(2rem, 5.5vw, 3.2rem);
   font-weight: 900;
   line-height: 1.15;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
-.construction-page h1 span { color: var(--clr-accent); }
-.construction-sub {
+.hero-content h1 span { color: var(--clr-accent); }
+.hero-sub {
   font-size: 1.05rem;
-  color: rgba(255,255,255,.85);
-  max-width: 420px;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 500px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
-.construction-tagline {
+.hero-tagline {
   font-size: .9rem;
-  color: rgba(255,255,255,.55);
+  color: rgba(255, 255, 255, 0.70);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
-.construction-cta {
-  font-size: 1.05rem;
-  padding: .8rem 2rem;
+.hero-cta {
+  font-size: 1.1rem;
+  padding: .9rem 2.25rem;
   margin-top: .25rem;
+  box-shadow: 0 4px 20px rgba(224, 92, 26, 0.55);
+}
+
+/* ---- Intro Section ---- */
+.intro-section {
+  background: var(--clr-white);
+  padding: 5rem 1.25rem;
+  text-align: center;
+}
+.intro-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.intro-section h2 {
+  font-size: clamp(1.55rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--clr-primary);
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+}
+.intro-section p {
+  font-size: 1.05rem;
+  color: var(--clr-text-light);
+  line-height: 1.85;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .intro-section { padding: 3rem 1.25rem; }
 }
 </style>
