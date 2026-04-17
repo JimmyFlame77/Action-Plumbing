@@ -3,7 +3,7 @@ description: "Licensed plumbing and HVAC services in the Lehigh Valley, PA. Fami
 url: "https://jimmyflame77.github.io"
 baseurl: "/Action-Plumbing"
 markdown: kramdown
-permalink: pretty
+permalink: none
 exclude:
   - Gemfile
   - Gemfile.lock
