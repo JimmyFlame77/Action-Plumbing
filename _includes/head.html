@@ -4,20 +4,25 @@
   <title>{{ page.title }}</title>
   {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
   <meta name="robots" content="{{ page.robots | default: 'index, follow' }}">
-  {% if page.canonical %}<link rel="canonical" href="{{ page.canonical }}">{% endif %}
+  <!-- Favicon -->
+  <link rel="icon" href="{{ '/images/logo.webp' | relative_url }}" type="image/webp">
+  <!-- Canonical -->
+  {% assign canonical_url = page.canonical | default: site.url | append: site.baseurl | append: page.url %}
+  <link rel="canonical" href="{{ canonical_url }}">
   <!-- Open Graph -->
-  <meta property="og:type" content="article">
+  {% assign og_image = page.image | default: '/images/action-plumbing-hvac.webp' %}
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
   <meta property="og:site_name" content="{{ site.data.site.company_name }}">
   <meta property="og:title" content="{{ page.og_title | default: page.title }}">
   <meta property="og:description" content="{{ page.og_description | default: page.description }}">
-  {% if page.canonical %}<meta property="og:url" content="{{ page.canonical }}">{% endif %}
+  <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:locale" content="en_US">
-  {% if page.image %}<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}">{% endif %}
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ og_image }}">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page.twitter_title | default: page.og_title | default: page.title }}">
   <meta name="twitter:description" content="{{ page.twitter_description | default: page.og_description | default: page.description }}">
-  {% if page.image %}<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}">{% endif %}
+  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ og_image }}">
   <!-- CSS -->
   <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
   {% if page.extra_head %}{{ page.extra_head }}{% endif %}
