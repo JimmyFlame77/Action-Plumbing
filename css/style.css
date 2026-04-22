@@ -260,3 +260,96 @@ ul { list-style: none; }
   .cta-strip { padding: 2rem 0; }
   .article-body { padding: 1.75rem 0 2rem; }
 }
+
+/* ================================================
+   Coupon Popup
+   ================================================ */
+.coupon-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.93);
+  z-index: 500;
+  background: var(--clr-white);
+  border: 3px dashed var(--clr-primary);
+  border-radius: 12px;
+  padding: 2rem 2.25rem 1.75rem;
+  max-width: 460px;
+  width: calc(100% - 2.5rem);
+  box-shadow: 0 12px 40px rgba(22,40,68,.20);
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+}
+.coupon-popup.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+}
+.coupon-close {
+  position: absolute;
+  top: .6rem;
+  right: .75rem;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--clr-text-light);
+  cursor: pointer;
+  line-height: 1;
+  padding: .25rem .35rem;
+  border-radius: 4px;
+  transition: color var(--transition), background var(--transition);
+}
+.coupon-close:hover { color: var(--clr-primary); background: var(--clr-border); }
+.coupon-snip {
+  font-size: 1.4rem;
+  margin-bottom: .75rem;
+  display: block;
+  transform: rotate(-45deg);
+  line-height: 1;
+}
+.coupon-headline {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--clr-primary);
+  margin-bottom: .75rem;
+  line-height: 1.2;
+}
+.coupon-body {
+  font-size: .97rem;
+  color: var(--clr-text);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.coupon-redeem {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin-bottom: .6rem;
+}
+.coupon-disclaimer {
+  font-size: .8rem;
+  color: var(--clr-accent);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+.coupon-btn {
+  display: inline-block;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: .7rem 2rem;
+  border-radius: 50px;
+  transition: background var(--transition), transform var(--transition);
+  letter-spacing: .02em;
+}
+.coupon-btn:hover {
+  background: var(--clr-primary-dark);
+  transform: translateY(-1px);
+}
+@media (max-width: 480px) {
+  .coupon-popup { padding: 1.75rem 1.25rem 1.5rem; }
+  .coupon-headline { font-size: 1.4rem; }
+}
