@@ -367,12 +367,7 @@ ul { list-style: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      rgba(248, 249, 252, 0.78),
-      rgba(248, 249, 252, 0.78)
-    ),
-    url('/images/fresh-air-clean-hvac-qtmdoq.webp') center / cover no-repeat;
+  /* background set in index.html <style> block via Liquid relative_url */
   pointer-events: none;
   z-index: 0;
 }

@@ -159,4 +159,14 @@ show_coupon: true
 @media (max-width: 480px) {
   .intro-section { padding: 3rem 1.25rem; }
 }
+
+/* ---- Map Section Background ---- */
+.map-section::before {
+  background:
+    linear-gradient(
+      rgba(248, 249, 252, 0.72),
+      rgba(248, 249, 252, 0.72)
+    ),
+    url('{{ "/images/fresh-air-clean-hvac-qtmdoq.webp" | relative_url }}') center / cover no-repeat;
+}
 </style>
