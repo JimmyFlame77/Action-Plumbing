@@ -359,7 +359,6 @@ ul { list-style: none; }
    ================================================ */
 .map-section {
   position: relative;
-  background: var(--clr-bg);
   padding: 4rem 0 5rem;
   text-align: center;
   overflow: hidden;
@@ -368,10 +367,12 @@ ul { list-style: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/images/fresh-air-clean-hvac-qtmdoq.webp');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.08;
+  background:
+    linear-gradient(
+      rgba(248, 249, 252, 0.78),
+      rgba(248, 249, 252, 0.78)
+    ),
+    url('/images/fresh-air-clean-hvac-qtmdoq.webp') center / cover no-repeat;
   pointer-events: none;
   z-index: 0;
 }
