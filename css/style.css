@@ -358,9 +358,26 @@ ul { list-style: none; }
    Service Area Map
    ================================================ */
 .map-section {
+  position: relative;
   background: var(--clr-bg);
   padding: 4rem 0 5rem;
   text-align: center;
+  overflow: hidden;
+}
+.map-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/fresh-air-clean-hvac-qtmdoq.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+.map-section .container {
+  position: relative;
+  z-index: 1;
 }
 .map-heading {
   font-size: clamp(1.55rem, 3.5vw, 2.2rem);
