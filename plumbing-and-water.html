@@ -125,4 +125,13 @@ description: "Licensed master plumbers serving the Lehigh Valley. Boiler, drain,
 .svc-hero--plumbing {
   background-image: url('{{ "/images/action-plumbing-wrench.webp" | relative_url }}');
 }
+/* ---- Coupon Section Background ---- */
+.coupon-inline-section::before {
+  background:
+    linear-gradient(
+      rgba(248, 249, 252, 0.72),
+      rgba(248, 249, 252, 0.72)
+    ),
+    url('{{ "/images/fresh-air-clean-hvac-qtmdoq.webp" | relative_url }}') center / cover no-repeat;
+}
 </style>

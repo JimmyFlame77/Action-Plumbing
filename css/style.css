@@ -491,6 +491,36 @@ ul { list-style: none; }
 }
 
 /* ================================================
+   Intro Section (shared across pages)
+   ================================================ */
+.intro-section {
+  background: var(--clr-white);
+  padding: 5rem 1.25rem;
+  text-align: center;
+}
+.intro-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.intro-section h2 {
+  font-size: clamp(1.55rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--clr-primary);
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+}
+.intro-section p {
+  font-size: 1.05rem;
+  color: var(--clr-text-light);
+  line-height: 1.85;
+  max-width: 740px;
+  margin: 0 auto;
+}
+@media (max-width: 480px) {
+  .intro-section { padding: 3rem 1.25rem; }
+}
+
+/* ================================================
    Service Page Hero (reusable across service pages)
    ================================================ */
 .svc-hero {
@@ -613,8 +643,20 @@ ul { list-style: none; }
    Static Coupon Card (inline, non-popup)
    ================================================ */
 .coupon-inline-section {
-  background: var(--clr-bg);
+  position: relative;
   padding: 4rem 0;
+  overflow: hidden;
+}
+.coupon-inline-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.coupon-inline-section .container {
+  position: relative;
+  z-index: 1;
 }
 .coupon-inline-wrap {
   display: flex;
