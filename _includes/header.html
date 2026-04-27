@@ -9,7 +9,7 @@
         <li><a href="{{ site.data.site.main_site }}/plumbing-and-water">Plumbing</a></li>
         <li><a href="{{ site.data.site.main_site }}/heating-and-air">Heating &amp; Air</a></li>
         <li><a href="{{ site.data.site.main_site }}/sewer-and-drain-cleaning">Drain &amp; Sewer</a></li>
-        <li><a href="{{ '/blog.html' | relative_url }}" {% if page.url contains 'blog' %}class="active"{% endif %}>Blog</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}" {% if page.url contains 'blog' %}class="active"{% endif %}>Blog</a></li>
       </ul>
       <a href="{{ site.data.site.phone_link }}" class="btn btn-primary nav-cta">{{ site.data.site.phone_formatted }}</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -22,7 +22,7 @@
     <a href="{{ site.data.site.main_site }}/plumbing-and-water">Plumbing</a>
     <a href="{{ site.data.site.main_site }}/heating-and-air">Heating &amp; Air</a>
     <a href="{{ site.data.site.main_site }}/sewer-and-drain-cleaning">Drain &amp; Sewer</a>
-    <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+    <a href="{{ '/blog/' | relative_url }}">Blog</a>
     <a href="{{ site.data.site.phone_link }}" style="color:var(--clr-accent);margin-top:.5rem;">&#128222; {{ site.data.site.phone_formatted }}</a>
   </nav>
 </header>

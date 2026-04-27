@@ -3,7 +3,7 @@ description: "Licensed plumbing and HVAC services in the Lehigh Valley, PA. Fami
 url: "https://actionplumbingonline.com"
 baseurl: ""
 markdown: kramdown
-permalink: none
+permalink: pretty
 exclude:
   - Gemfile
   - Gemfile.lock
