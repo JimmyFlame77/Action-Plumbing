@@ -128,8 +128,8 @@ Action-Plumbing/
 ### `_config.yml`
 
 ```yaml
-url: "https://jimmyflame77.github.io"
-baseurl: "/Action-Plumbing"
+url: "https://actionplumbingonline.com"
+baseurl: ""
 markdown: kramdown
 permalink: none          # Posts use their own slug from the filename
 plugins:
@@ -137,7 +137,7 @@ plugins:
   - jekyll-sitemap
 ```
 
-`baseurl` is required because the site lives in a subdirectory on GitHub Pages. All internal links should use the `relative_url` filter:
+`baseurl` is empty because the site uses a custom domain. All internal links should use the `relative_url` filter:
 
 ```liquid
 href="{{ '/some-page' | relative_url }}"
@@ -422,7 +422,7 @@ description: "..."
 
 The site deploys automatically on every push to the `main` branch via GitHub Pages.
 
-**Live URL:** `https://jimmyflame77.github.io/Action-Plumbing`
+**Live URL:** `https://actionplumbingonline.com`
 
 Deployment is zero-config — GitHub Pages detects the `Gemfile` and builds the site with Jekyll automatically. The `exclude:` list in `_config.yml` prevents dev files from being included in the build output.
 
