@@ -249,7 +249,7 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
-  .logo-img { height: 22px; }
+  .logo-img { height: 25px; }
   .footer-inner { grid-template-columns: 1fr; gap: 1.75rem; }
   .post-grid { grid-template-columns: 1fr; }
   .article-nav { flex-direction: column; }
