@@ -235,8 +235,7 @@ ul { list-style: none; }
 /* Footer */
 .site-footer { background: var(--clr-primary-dark); color: rgba(255,255,255,.8); padding: 3rem 0 0; }
 .footer-inner { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,.1); }
-.footer-logo { font-size: 1.4rem; font-weight: 900; color: var(--clr-white); margin-bottom: .5rem; }
-.footer-logo span { color: var(--clr-accent); }
+.footer-logo { display: block; height: 42px; width: auto; margin-bottom: .5rem; }
 .footer-tagline { font-size: .88rem; line-height: 1.5; color: rgba(255,255,255,.6); }
 .footer-links h4, .footer-contact h4 { color: var(--clr-white); font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: .85rem; }
 .footer-links { display: flex; flex-direction: column; gap: .4rem; }
